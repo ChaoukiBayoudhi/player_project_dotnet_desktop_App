@@ -16,5 +16,10 @@ namespace player_project
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Form1.players.LstPlyers;
+        }
     }
 }
