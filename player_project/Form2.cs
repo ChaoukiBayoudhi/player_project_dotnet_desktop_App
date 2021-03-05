@@ -19,7 +19,11 @@ namespace player_project
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Form1.players.LstPlyers;
+            dataGridView1.DataSource = Form1.players.LstPlayers; 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+                    }
     }
 }

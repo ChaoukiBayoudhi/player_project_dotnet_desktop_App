@@ -10,22 +10,7 @@ using System.Windows.Forms;
 
 namespace player_project
 {
-    enum PlayerPosition {
-       // [Description("Goal Keepper")]
-        GoalKeepper,
-        Centreback,
-        Sweeper,
-        Fullback,
-        Wingback,
-        Centremidfield,
-        Defensivemidfield,
-        Attackingmidfield,
-        Widemidfield,
-        Striker,
-        CenterForword,
-        LeftWinger,
-        RightWinger
-    }
+    
     public partial class Form1 : Form
     {
         internal static Players players = new Players();
@@ -42,13 +27,14 @@ namespace player_project
             Player player = new Player();
             player.Id = int.Parse(txt_Id.Text);
             player.Name = txt_Name.Text;
-            player.Position = cmb_position.Text;
+
+            player.BirthDate = dtp_birthdate.Value;
             player.State = PlayerState.SAFE;
             if(rdb_injured.Checked)
                 player.State = PlayerState.INJURED;
-
-            Form1.players.LstPlyers.Add(player);
-
+            player.Position = (PlayerPosition)cmb_position.SelectedItem;
+            Form1.players.LstPlayers.Add(player);
+            MessageBox.Show("Player has been added");
             //open the next Form
             Form2 f2 = new Form2();
             //f2.Hide();//cacher la fenetre

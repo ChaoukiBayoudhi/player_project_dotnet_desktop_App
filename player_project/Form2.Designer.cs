@@ -32,18 +32,19 @@ namespace player_project
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_Name = new System.Windows.Forms.TextBox();
-            this.txt_Id = new System.Windows.Forms.TextBox();
-            this.dtp_Birthdate = new System.Windows.Forms.DateTimePicker();
-            this.rdb_Injured = new System.Windows.Forms.RadioButton();
+            this.bt_RemovePlayer = new System.Windows.Forms.Button();
             this.rdb_safe = new System.Windows.Forms.RadioButton();
-            this.bt_Remove = new System.Windows.Forms.Button();
+            this.rdb_Injured = new System.Windows.Forms.RadioButton();
+            this.cmb_Position = new System.Windows.Forms.ComboBox();
+            this.dtp_Birthdate = new System.Windows.Forms.DateTimePicker();
+            this.txt_Id = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bt_ModifyPlayer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,17 +62,18 @@ namespace player_project
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 269);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 269);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(453, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(509, 150);
             this.dataGridView1.TabIndex = 1;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bt_Remove);
+            this.groupBox1.Controls.Add(this.bt_ModifyPlayer);
+            this.groupBox1.Controls.Add(this.bt_RemovePlayer);
             this.groupBox1.Controls.Add(this.rdb_safe);
             this.groupBox1.Controls.Add(this.rdb_Injured);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_Position);
             this.groupBox1.Controls.Add(this.dtp_Birthdate);
             this.groupBox1.Controls.Add(this.txt_Id);
             this.groupBox1.Controls.Add(this.txt_Name);
@@ -89,74 +91,26 @@ namespace player_project
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Payer\'s Informations";
             // 
-            // label3
+            // bt_RemovePlayer
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(310, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "State";
+            this.bt_RemovePlayer.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_RemovePlayer.Location = new System.Drawing.Point(388, 111);
+            this.bt_RemovePlayer.Name = "bt_RemovePlayer";
+            this.bt_RemovePlayer.Size = new System.Drawing.Size(127, 33);
+            this.bt_RemovePlayer.TabIndex = 11;
+            this.bt_RemovePlayer.Text = "Remove Player";
+            this.bt_RemovePlayer.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // rdb_safe
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(19, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Player Id";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(19, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Player Name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(19, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 16);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "BirthDate";
-            // 
-            // txt_Name
-            // 
-            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txt_Name.ForeColor = System.Drawing.Color.Black;
-            this.txt_Name.Location = new System.Drawing.Point(125, 75);
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(151, 20);
-            this.txt_Name.TabIndex = 5;
-            // 
-            // txt_Id
-            // 
-            this.txt_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txt_Id.ForeColor = System.Drawing.Color.Black;
-            this.txt_Id.Location = new System.Drawing.Point(125, 33);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(151, 20);
-            this.txt_Id.TabIndex = 6;
-            // 
-            // dtp_Birthdate
-            // 
-            this.dtp_Birthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dtp_Birthdate.Location = new System.Drawing.Point(125, 110);
-            this.dtp_Birthdate.MaxDate = new System.DateTime(8739, 11, 30, 0, 0, 0, 0);
-            this.dtp_Birthdate.MinDate = new System.DateTime(1971, 6, 17, 0, 0, 0, 0);
-            this.dtp_Birthdate.Name = "dtp_Birthdate";
-            this.dtp_Birthdate.Size = new System.Drawing.Size(151, 20);
-            this.dtp_Birthdate.TabIndex = 7;
-            this.dtp_Birthdate.Value = new System.DateTime(2023, 6, 15, 0, 0, 0, 0);
+            this.rdb_safe.AutoSize = true;
+            this.rdb_safe.ForeColor = System.Drawing.Color.Black;
+            this.rdb_safe.Location = new System.Drawing.Point(473, 77);
+            this.rdb_safe.Name = "rdb_safe";
+            this.rdb_safe.Size = new System.Drawing.Size(58, 20);
+            this.rdb_safe.TabIndex = 10;
+            this.rdb_safe.Text = "Safe";
+            this.rdb_safe.UseVisualStyleBackColor = true;
             // 
             // rdb_Injured
             // 
@@ -171,26 +125,83 @@ namespace player_project
             this.rdb_Injured.Text = "Injured";
             this.rdb_Injured.UseVisualStyleBackColor = true;
             // 
-            // rdb_safe
+            // cmb_Position
             // 
-            this.rdb_safe.AutoSize = true;
-            this.rdb_safe.ForeColor = System.Drawing.Color.Black;
-            this.rdb_safe.Location = new System.Drawing.Point(473, 77);
-            this.rdb_safe.Name = "rdb_safe";
-            this.rdb_safe.Size = new System.Drawing.Size(58, 20);
-            this.rdb_safe.TabIndex = 10;
-            this.rdb_safe.Text = "Safe";
-            this.rdb_safe.UseVisualStyleBackColor = true;
+            this.cmb_Position.ForeColor = System.Drawing.Color.Black;
+            this.cmb_Position.FormattingEnabled = true;
+            this.cmb_Position.Location = new System.Drawing.Point(368, 30);
+            this.cmb_Position.Name = "cmb_Position";
+            this.cmb_Position.Size = new System.Drawing.Size(135, 24);
+            this.cmb_Position.TabIndex = 8;
             // 
-            // bt_Remove
+            // dtp_Birthdate
             // 
-            this.bt_Remove.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.bt_Remove.Location = new System.Drawing.Point(388, 111);
-            this.bt_Remove.Name = "bt_Remove";
-            this.bt_Remove.Size = new System.Drawing.Size(127, 33);
-            this.bt_Remove.TabIndex = 11;
-            this.bt_Remove.Text = "Remove Player";
-            this.bt_Remove.UseVisualStyleBackColor = true;
+            this.dtp_Birthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dtp_Birthdate.Location = new System.Drawing.Point(125, 110);
+            this.dtp_Birthdate.MaxDate = new System.DateTime(8739, 11, 30, 0, 0, 0, 0);
+            this.dtp_Birthdate.MinDate = new System.DateTime(1971, 6, 17, 0, 0, 0, 0);
+            this.dtp_Birthdate.Name = "dtp_Birthdate";
+            this.dtp_Birthdate.Size = new System.Drawing.Size(151, 20);
+            this.dtp_Birthdate.TabIndex = 7;
+            this.dtp_Birthdate.Value = new System.DateTime(2023, 6, 15, 0, 0, 0, 0);
+            // 
+            // txt_Id
+            // 
+            this.txt_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_Id.ForeColor = System.Drawing.Color.Black;
+            this.txt_Id.Location = new System.Drawing.Point(125, 33);
+            this.txt_Id.Name = "txt_Id";
+            this.txt_Id.Size = new System.Drawing.Size(151, 20);
+            this.txt_Id.TabIndex = 6;
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_Name.ForeColor = System.Drawing.Color.Black;
+            this.txt_Name.Location = new System.Drawing.Point(125, 75);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(151, 20);
+            this.txt_Name.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(19, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "BirthDate";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(19, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Player Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(19, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Player Id";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(310, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "State";
             // 
             // label7
             // 
@@ -202,14 +213,15 @@ namespace player_project
             this.label7.TabIndex = 0;
             this.label7.Text = "Position";
             // 
-            // comboBox1
+            // bt_ModifyPlayer
             // 
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(368, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 24);
-            this.comboBox1.TabIndex = 8;
+            this.bt_ModifyPlayer.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_ModifyPlayer.Location = new System.Drawing.Point(388, 150);
+            this.bt_ModifyPlayer.Name = "bt_ModifyPlayer";
+            this.bt_ModifyPlayer.Size = new System.Drawing.Size(127, 33);
+            this.bt_ModifyPlayer.TabIndex = 12;
+            this.bt_ModifyPlayer.Text = "Modify Player";
+            this.bt_ModifyPlayer.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -235,10 +247,10 @@ namespace player_project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button bt_Remove;
+        private System.Windows.Forms.Button bt_RemovePlayer;
         private System.Windows.Forms.RadioButton rdb_safe;
         private System.Windows.Forms.RadioButton rdb_Injured;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Position;
         private System.Windows.Forms.DateTimePicker dtp_Birthdate;
         private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.TextBox txt_Name;
@@ -247,5 +259,6 @@ namespace player_project
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bt_ModifyPlayer;
     }
 }

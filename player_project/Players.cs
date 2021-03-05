@@ -8,6 +8,6 @@ namespace player_project
 {
     class Players
     {
-        public List<Player> LstPlyers { get; set; } = new List<Player>();
+        public List<Player> LstPlayers { get; set; } = new List<Player>();
     }
 }
