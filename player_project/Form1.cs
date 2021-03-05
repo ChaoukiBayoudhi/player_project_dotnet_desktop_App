@@ -24,16 +24,20 @@ namespace player_project
         {
 
             //Add Player
-            Player player = new Player();
-            player.Id = int.Parse(txt_Id.Text);
-            player.Name = txt_Name.Text;
+            Player player = new Player
+            {
+                Id = int.Parse(txt_Id.Text),
+                Name = txt_Name.Text,
+                BirthDate = dtp_birthdate.Value,
+                Position = (PlayerPosition)cmb_position.SelectedItem,
+                State = PlayerState.SAFE
+            };
+        
 
-            player.BirthDate = dtp_birthdate.Value;
-            player.State = PlayerState.SAFE;
-            if(rdb_injured.Checked)
+            if (rdb_injured.Checked)
                 player.State = PlayerState.INJURED;
-            player.Position = (PlayerPosition)cmb_position.SelectedItem;
-            Form1.players.LstPlayers.Add(player);
+           
+        Form1.players.LstPlayers.Add(player);
             MessageBox.Show("Player has been added");
             //open the next Form
             Form2 f2 = new Form2();
